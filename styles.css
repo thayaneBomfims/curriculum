@@ -99,6 +99,25 @@ h1 {
     gap: 20px;
 }
 
+.translate-button {
+    justify-self: start;
+    align-self: start;
+    padding: 10px 16px;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--accent);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.translate-button:hover {
+    background: rgba(254, 226, 226, 0.95);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.12);
+}
+
 .contact-card p {
     margin: 0;
     color: var(--text-muted);
