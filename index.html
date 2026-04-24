@@ -27,7 +27,10 @@
                 </div>
             </div>
             <div class="contact-card">
-                <button class="translate-button" id="translateBtn" type="button">English</button>
+                <button class="translate-button" id="translateBtn" type="button">
+                    <span class="icon">🌐</span>
+                    <span class="label">English</span>
+                </button>
                 <h2 data-translate-key="contactHeading">Contato & links</h2>
                 <p><strong data-translate-key="contactLabelLinkedIn">LinkedIn</strong><br /><a
                         href="https://www.linkedin.com/in/thayane-bomfim/">linkedin.com/in/thayane-bomfim</a></p>
@@ -377,7 +380,8 @@
 
         function updateTranslations() {
             document.documentElement.lang = currentLanguage === 'pt' ? 'pt-BR' : 'en';
-            translateButton.textContent = currentLanguage === 'pt' ? 'English' : 'Português';
+            translateButton.querySelector('.label').textContent =
+                currentLanguage === 'pt' ? 'English' : 'Português';
             document.title = translations.pageTitle[currentLanguage];
             document.querySelectorAll('[data-translate-key]').forEach(element => {
                 const key = element.dataset.translateKey;
